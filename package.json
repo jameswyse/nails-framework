@@ -2,7 +2,7 @@
   "name": "nails-framework",
   "version": "0.0.1",
   "description": "Nails Framework",
-  "main": "lib/nails.js",
+  "main": "index.js",
   "repository": "https://github.com/nails/nails-framework",
   "author": "James Wyse <james@jameswyse.net>",
   "license": "MIT",
