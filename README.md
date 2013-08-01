@@ -1,3 +1,3 @@
-<img src="https://raw.github.com/Nails/nails-framework/master/assets/nails@2x.png" width="100%" />
+<img src="/assets/nails@2x.png" width="100%" alt="Nails Framework" title="Nails Framework" />
 
 WIP
