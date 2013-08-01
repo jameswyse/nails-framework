@@ -1,4 +1,4 @@
-nails-framework
+Nails Framework
 ===============
 
-Nails Framework
+WIP
