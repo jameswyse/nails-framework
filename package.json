@@ -11,7 +11,6 @@
   "dependencies": {
     "eventemitter2": "~0.4.12",
     "resolveit": "~0.1.4",
-    "colors": "~0.6.1",
     "nails-config": "git+ssh://git@github.com:nails/nails-config.git",
     "nails-logger": "git+ssh://git@github.com:nails/nails-logger.git"
   }

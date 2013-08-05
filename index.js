@@ -1,16 +1,15 @@
-//
-// Nails Framework
-//
+////////////////////////////////////
+// Nails Framework - Core Library //
+////////////////////////////////////
 
 
 //
 // Module Dependencies
 //
-var path = require('path'),
-    fs = require('fs'),
-    resolve = require('resolveit'),
-    EventEmitter2 = require('eventemitter2').EventEmitter2,
-    colors = require('colors');
+var path          = require('path');
+var fs            = require('fs');
+var resolve       = require('resolveit');
+var EventEmitter2 = require('eventemitter2').EventEmitter2;
 
 //
 // Export the main application
