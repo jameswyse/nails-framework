@@ -2,13 +2,11 @@
 // Nails Framework - Core Library //
 ////////////////////////////////////
 
-
 //
 // Module Dependencies
 //
+require('colors');
 var path          = require('path');
-var fs            = require('fs');
-var resolve       = require('resolveit');
 var EventEmitter2 = require('eventemitter2').EventEmitter2;
 
 /**
@@ -39,7 +37,7 @@ try { app.pkg = require(path.resolve(app.root, 'package.json')); }
 catch(e) {
   app.pkg = require(path.resolve(__dirname, 'package.json'));
 }
-
+console.dir(app.pkg);
 /**
  * Determines the current environment
  *
