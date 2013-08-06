@@ -16,7 +16,7 @@ var EventEmitter2 = require('eventemitter2').EventEmitter2;
  *
  * @type {EventEmitter2}
  */
-var App = module.exports = new EventEmitter2({
+var app = module.exports = new EventEmitter2({
   wildcard: true,
   delimiter: '.',
   newListener: false,
