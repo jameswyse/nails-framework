@@ -37,7 +37,7 @@ try { app.pkg = require(path.resolve(app.root, 'package.json')); }
 catch(e) {
   app.pkg = require(path.resolve(__dirname, 'package.json'));
 }
-console.dir(app.pkg);
+
 /**
  * Determines the current environment
  *
