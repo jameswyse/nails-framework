@@ -8,6 +8,7 @@
 require('colors');
 var path          = require('path');
 var EventEmitter2 = require('eventemitter2').EventEmitter2;
+var lodash        = require('lodash');
 
 /**
  * Export the main application
@@ -45,14 +46,7 @@ catch(e) {
  */
 app.env = process.env.NODE_ENV ? process.env.NODE_ENV.toLowerCase() : 'development';
 
-/**
- * Store Temp Data
- *
- * @type {Object}
- */
-app.__ = {
-  plugins: {}
-};
+app._ = lodash;
 
 // Load system plugins
 require('nails-config');
