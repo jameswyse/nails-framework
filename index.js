@@ -54,7 +54,7 @@ var App = function() {
 util.inherits(App, EventEmitter2);
 
 App.prototype.use = function(plugins) {
-  var args = [].prototype.slice(arguments, 1);
+  var args = _.rest(arguments);
   console.dir(args);
   if(!_.isArray(plugins)) plugins = [plugins];
 
