@@ -51,7 +51,7 @@ var App = function() {
   self.log.info('');
 };
 
-util.inherits(self, EventEmitter2);
+util.inherits(App, EventEmitter2);
 
 App.prototype.use = function(plugins) {
   var args = [].prototype.slice(arguments, 1);
