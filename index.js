@@ -8,7 +8,7 @@
 require('colors');
 var path          = require('path');
 var EventEmitter2 = require('eventemitter2').EventEmitter2;
-var lodash        = require('lodash');
+var _             = require('lodash');
 var util          = require('util');
 
 var config        = require('nails-config');
@@ -34,7 +34,7 @@ var App = function() {
   self.env = process.env.NODE_ENV ? process.env.NODE_ENV.toLowerCase() : 'development';
 
   // Bundle Lodash
-  self._ = lodash;
+  self._ = _;
 
   // Load system plugins
   self.use(config);
