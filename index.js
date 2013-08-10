@@ -55,11 +55,15 @@ util.inherits(App, EventEmitter2);
 
 App.prototype.use = function(plugins) {
   var args = _.rest(arguments);
+  var self = this;
+
   console.dir(args);
   if(!_.isArray(plugins)) plugins = [plugins];
 
   _.each(plugins, function(plugin) {
     if(_.isFunction(plugin)) plugin.call(self, self, args);
   });
+
+  return self;
 };
 
