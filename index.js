@@ -9,55 +9,57 @@ require('colors');
 var path          = require('path');
 var EventEmitter2 = require('eventemitter2').EventEmitter2;
 var lodash        = require('lodash');
+var util          = require('util');
 
-/**
- * Export the main application
- *
- * @type {EventEmitter2}
- */
-var app = module.exports = new EventEmitter2({
-  wildcard: true,
-  delimiter: '.',
-  newListener: false,
-  maxListeners: 0
-});
+var config        = require('nails-config');
+var logger        = require('nails-logger');
 
-/**
- * Determines the correct working directory
- */
-var rel = path.relative(process.cwd(), path.dirname(process.mainModule.filename));
-if(rel) process.chdir(rel);
-app.root = process.cwd();
+var Nails = module.exports = function() {
+  return new App();
+};
 
-/**
- * Loads package.json
- *
- * @type {Object}
- */
-try { app.pkg = require(path.resolve(app.root, 'package.json')); }
-catch(e) {
-  app.pkg = require(path.resolve(__dirname, 'package.json'));
-}
+var App = function() {
+  var self = this;
 
-/**
- * Determines the current environment
- *
- * @type {String}
- */
-app.env = process.env.NODE_ENV ? process.env.NODE_ENV.toLowerCase() : 'development';
+  // Determine the correct working directory
+  var rel = path.relative(process.cwd(), path.dirname(process.mainModule.filename));
+  if(rel) process.chdir(rel);
+  self.root = process.cwd();
 
-app._ = lodash;
+  // Load package.json
+  try { self.pkg = require(path.resolve(self.root, 'package.json')); }
+  catch(e) { self.pkg = require(path.resolve(__dirname, 'package.json')); }
 
-// Load system plugins
-require('nails-config');
-require('nails-logger');
+  // Determine the environment
+  self.env = process.env.NODE_ENV ? process.env.NODE_ENV.toLowerCase() : 'development';
 
-// Display Welcome Message
-app.log.info('');
-app.log.info('Nails Framework v0.0.1');
-app.log.info('');
-app.log.info('Name:           ' + app.pkg.name.cyan);
-app.log.info('Description:    ' + app.pkg.description.cyan);
-app.log.info('Version:        ' + app.pkg.version.cyan);
-app.log.info('Environment:    ' + app.env.cyan);
-app.log.info('');
+  // Bundle Lodash
+  self._ = lodash;
+
+  // Load system plugins
+  self.use(config);
+  self.use(logger);
+
+  // Display Welcome Message
+  self.log.info('');
+  self.log.info('Nails Framework v0.0.1');
+  self.log.info('');
+  self.log.info('Name:           ' + self.pkg.name.cyan);
+  self.log.info('Description:    ' + self.pkg.description.cyan);
+  self.log.info('Version:        ' + self.pkg.version.cyan);
+  self.log.info('Environment:    ' + self.env.cyan);
+  self.log.info('');
+};
+
+util.inherits(self, EventEmitter2);
+
+App.prototype.use = function(plugins) {
+  var args = [].prototype.slice(arguments, 1);
+  console.dir(args);
+  if(!_.isArray(plugins)) plugins = [plugins];
+
+  _.each(plugins, function(plugin) {
+    if(_.isFunction(plugin)) plugin.call(self, self, args);
+  });
+};
+
