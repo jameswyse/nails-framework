@@ -10,12 +10,15 @@ var path          = require('path');
 var EventEmitter2 = require('eventemitter2').EventEmitter2;
 var _             = require('lodash');
 var locator       = require('servicelocator');
+var bootable      = require('bootable');
 var util          = require('util');
 var config        = require('nails-config');
 var logger        = require('nails-logger');
 
 var Nails = module.exports = function(options) {
-  return new App(options);
+  var app = new App(options);
+  bootable(app);
+  return app;
 };
 
 var App = function(options) {
