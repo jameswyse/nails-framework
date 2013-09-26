@@ -15,12 +15,19 @@ var util          = require('util');
 var config        = require('nails-config');
 var logger        = require('nails-logger');
 
-var Nails = module.exports = function(options) {
+//
+// Application Factory
+//
+module.exports = function(options) {
   var app = new App(options);
   bootable(app);
+
   return app;
 };
 
+//
+// Application Constructor
+//
 var App = function(options) {
   var self = this;
 
@@ -30,7 +37,7 @@ var App = function(options) {
   self.root = process.cwd();
 
   // Load package.json
-  try { self.pkg = require(path.resolve(self.root, 'package.json')); }
+  try      { self.pkg = require(path.resolve(self.root, 'package.json')); }
   catch(e) { self.pkg = require(path.resolve(__dirname, 'package.json')); }
 
   // Determine the environment
@@ -56,6 +63,9 @@ var App = function(options) {
 
 util.inherits(App, EventEmitter2);
 
+//
+// Plugin Loader
+//
 App.prototype.use = function(plugins) {
   var args = _.rest(arguments);
   var self = this;
@@ -69,4 +79,7 @@ App.prototype.use = function(plugins) {
   return self;
 };
 
+//
+// Service Locator
+//
 App.prototype.service = locator;
