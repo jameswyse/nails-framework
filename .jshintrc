@@ -11,6 +11,5 @@
     "multistr": true,
     "unused": "vars",
     "strict": false,
-    "trailing": true,
-    "es5": true
+    "trailing": true
 }
