@@ -14,6 +14,7 @@
     "nails-config": "git+ssh://git@github.com:nails/nails-config.git",
     "nails-logger": "git+ssh://git@github.com:nails/nails-logger.git",
     "colors": "~0.6.1",
-    "lodash": "~1.3.1"
+    "lodash": "~1.3.1",
+    "servicelocator": "~1.0.0"
   }
 }

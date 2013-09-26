@@ -9,16 +9,16 @@ require('colors');
 var path          = require('path');
 var EventEmitter2 = require('eventemitter2').EventEmitter2;
 var _             = require('lodash');
+var locator       = require('servicelocator');
 var util          = require('util');
-
 var config        = require('nails-config');
 var logger        = require('nails-logger');
 
-var Nails = module.exports = function() {
-  return new App();
+var Nails = module.exports = function(options) {
+  return new App(options);
 };
 
-var App = function() {
+var App = function(options) {
   var self = this;
 
   // Determine the correct working directory
@@ -66,3 +66,4 @@ App.prototype.use = function(plugins) {
   return self;
 };
 
+App.prototype.service = locator;
