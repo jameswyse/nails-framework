@@ -32,6 +32,9 @@ An HTTP router and server based on Express. It includes additional tools for mid
 ### [nails-schemas](https://github.com/nails/nails-schemas)
 A schema registry and set of common schemas and plugins for mongoose.
 
+### [nails-api](https://github.com/nails/nails-api)
+Creates REST API endpoints from your mongoose models.
+
 ### [nails-admin](https://github.com/nails/nails-admin)
 A customisable admin interface for your application. 
 
