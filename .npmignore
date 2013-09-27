@@ -1,6 +1,7 @@
 # Dotfiles
 .DS_Store
 .gitignore
+.gitattributes
 .npmignore
 .jshintrc
 .editorconfig
