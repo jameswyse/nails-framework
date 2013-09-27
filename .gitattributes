@@ -18,17 +18,22 @@ Makefile       text
 *.styl         text
 *.sass         text
 *.scss         text
-*.html         text
+*.html         text      diff=html
 *.md           text
 *.markdown     text
-*.handlebars   text
+*.handlebars   text      diff=html
 *.jade         text
 *.mustache     text
 *.htc          text
 *.sh           text
-*.rb           text
 *.gemspec      text
+*.rb           text      diff=ruby
 *.cs           text      diff=csharp
+*.php          text      diff=php
+*.pl           text      diff=perl
+*.py           text      diff=python
+*.java         text      diff=java
+*.tex          text      diff=tex
 *.xaml         text
 *.csproj       text
 *.sln          text
@@ -37,7 +42,6 @@ Makefile       text
 *.cmd          text
 *.msbuild      text
 *.md           text
-*.php          text
 
 *.doc                    diff=astextplain
 *.DOC                    diff=astextplain
