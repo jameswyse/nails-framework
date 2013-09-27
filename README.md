@@ -1,5 +1,7 @@
 <img src="/assets/nails@2x.png" width="100%" alt="Nails Framework" title="Nails Framework" />
 
+    Warning: this project is still in the early stages of development.
+    
 Nails Framework
 ===============
 
