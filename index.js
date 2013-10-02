@@ -71,7 +71,6 @@ App.prototype.use = function(plugins) {
   var self = this;
 
   if(!Array.isArray(plugins)) plugins = [plugins];
-  // if(!_.isArray(plugins)) plugins = [plugins];
 
   plugins.forEach(function(plugin) {
     if(_.isFunction(plugin)) plugin.call(self, self, args);
