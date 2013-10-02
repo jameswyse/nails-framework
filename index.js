@@ -31,20 +31,20 @@ module.exports = function(options) {
 var App = function(options) {
   var self = this;
 
+  self.plugins = {};
+  self._ = _;
+
   // Determine the correct working directory
   var rel = path.relative(process.cwd(), path.dirname(process.mainModule.filename));
   if(rel) process.chdir(rel);
   self.root = process.cwd();
 
-  // Load package.json
-  try      { self.pkg = require(path.resolve(self.root, 'package.json')); }
-  catch(e) { self.pkg = require(path.resolve(__dirname, 'package.json')); }
-
   // Determine the environment
   self.env = process.env.NODE_ENV ? process.env.NODE_ENV.toLowerCase() : 'development';
 
-  // Bundle Lodash
-  self._ = _;
+  // Load package.json
+  try      { self.pkg = require(path.resolve(self.root, 'package.json')); }
+  catch(e) { self.pkg = require(path.resolve(__dirname, 'package.json')); }
 
   // Load system plugins
   self.use(config);
@@ -70,9 +70,10 @@ App.prototype.use = function(plugins) {
   var args = _.rest(arguments);
   var self = this;
 
-  if(!_.isArray(plugins)) plugins = [plugins];
+  if(!Array.isArray(plugins)) plugins = [plugins];
+  // if(!_.isArray(plugins)) plugins = [plugins];
 
-  _.each(plugins, function(plugin) {
+  plugins.forEach(function(plugin) {
     if(_.isFunction(plugin)) plugin.call(self, self, args);
   });
 
