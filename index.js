@@ -31,7 +31,10 @@ module.exports = function(options) {
 var App = function(options) {
   var self = this;
 
-  self.plugins = {};
+  self.types = {
+    Registry: require('./lib/types/Registry')
+  };
+
   self._ = _;
 
   // Determine the correct working directory
