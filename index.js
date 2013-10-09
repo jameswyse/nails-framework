@@ -98,7 +98,7 @@ App.prototype.useAll = function(dir, options) {
       return path.resolve(dir, filename);
     })
     .filter(function(filename) {
-      return fs.statSync(filename).isFile() && path.extname(filename) === ext;
+      return fs.statSync(filename).isFile() && path.extname(filename) === options.ext;
     })
     .forEach(function(filename) {
       modules.push(require(filename));
