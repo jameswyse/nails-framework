@@ -7,6 +7,7 @@
 //
 require('colors');
 var path          = require('path');
+var fs            = require('fs');
 var EventEmitter2 = require('eventemitter2').EventEmitter2;
 var _             = require('lodash');
 var locator       = require('servicelocator');
@@ -80,6 +81,30 @@ App.prototype.use = function(plugins) {
   });
 
   return self;
+};
+
+App.prototype.useAll = function(dir, options) {
+  var self = this;
+  var modules = [];
+
+  options = options || {};
+  options.base = options.base || self.root || __dirname;
+  options.ext = options.ext || '.js';
+
+  dir = path.resolve(options.base, dir);
+
+  fs.readdirSync(dir)
+    .map(function(filename) {
+      return path.resolve(dir, filename);
+    })
+    .filter(function(filename) {
+      return fs.statSync(filename).isFile() && path.extname(filename) === ext;
+    })
+    .forEach(function(filename) {
+      modules.push(require(filename));
+    });
+
+  self.use(modules);
 };
 
 //
