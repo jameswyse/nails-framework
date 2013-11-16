@@ -56,7 +56,7 @@ var App = function(options) {
 
   // Display Welcome Message
   self.log.info('');
-  self.log.info('Nails Framework v0.0.1');
+  self.log.info('Nails Framework v0.0.2');
   self.log.info('');
   self.log.info('Name:           ' + self.pkg.name.cyan);
   self.log.info('Description:    ' + self.pkg.description.cyan);
