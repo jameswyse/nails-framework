@@ -13,7 +13,7 @@
     "nails-config": "~0.0.1",
     "nails-logger": "~0.0.1",
     "colors": "~0.6.1",
-    "lodash": "~2.1.0",
+    "lodash": "~2.3.0",
     "servicelocator": "~1.0.0",
     "bootable": "~0.1.0"
   }
