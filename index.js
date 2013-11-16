@@ -104,7 +104,7 @@ App.prototype.useAll = function(dir, options) {
       modules.push(require(filename));
     });
 
-  self.use(modules);
+  return self.use(modules);
 };
 
 //
