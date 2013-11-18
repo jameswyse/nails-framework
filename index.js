@@ -107,6 +107,8 @@ App.prototype.useAll = function(dir, options) {
   return self.use(modules);
 };
 
+App.prototype.all = App.prototype.useAll;
+
 //
 // Service Locator
 //
