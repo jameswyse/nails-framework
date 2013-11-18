@@ -77,7 +77,14 @@ App.prototype.use = function(plugins) {
   if(!Array.isArray(plugins)) plugins = [plugins];
 
   plugins.forEach(function(plugin) {
-    if(_.isFunction(plugin)) plugin.call(self, self, args);
+    if(_.isFunction(plugin)) {
+      plugin.call(self, self, args);
+    }
+    else if(_.isString(plugin)) {
+      var p = require(plugin);
+      if(p && _.isFunction(p)) p.call(self, self, args);
+    }
+
   });
 
   return self;
