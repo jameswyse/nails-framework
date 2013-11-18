@@ -1,6 +1,6 @@
 {
   "name": "nails-framework",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Nails Framework",
   "main": "index.js",
   "repository": "https://github.com/nails/nails-framework",
