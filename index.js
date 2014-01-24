@@ -39,8 +39,8 @@ var App = function(options) {
   self._ = _;
 
   // Determine the correct working directory
-  var rel = path.relative(process.cwd(), path.dirname(process.mainModule.filename));
-  if(rel) process.chdir(rel);
+  // var rel = path.relative(process.cwd(), path.dirname(process.mainModule.filename));
+  // if(rel) process.chdir(rel);
   self.root = process.cwd();
 
   // Determine the environment
