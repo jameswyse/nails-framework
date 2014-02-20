@@ -19,5 +19,4 @@ Makefile
 # Documentation & Extras
 README.md
 docs/
-examples/
-assets/
+example/

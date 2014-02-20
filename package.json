@@ -1,20 +1,33 @@
 {
   "name": "nails-framework",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Nails Framework",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "framework",
+    "nails",
+    "hapi"
+  ],
   "repository": "https://github.com/nails/nails-framework",
   "author": "James Wyse <james@jameswyse.net>",
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "eventemitter2": "~0.4.12",
-    "resolveit": "~0.1.4",
-    "nails-config": "~0.0.1",
-    "nails-logger": "~0.0.1",
-    "colors": "~0.6.1",
-    "lodash": "~2.3.0",
-    "servicelocator": "~1.0.0",
-    "bootable": "~0.1.0"
+    "hapi": "git://github.com/spumko/hapi.git",
+    "hoek": "~1.4.1",
+    "async": "~0.2.10",
+    "confidence": "~0.12.0",
+    "graceful-fs": "~2.0.1",
+    "glob": "~3.2.8",
+    "intel": "~0.5.1",
+    "intel-syslog": "~0.1.0",
+    "chalk": "~0.4.0",
+    "redis": "~0.10.0",
+    "bluebird": "~1.0.5",
+    "hapi-promise": "0.0.4",
+    "joi": "~2.7.0",
+    "request": "~2.34.0"
   }
 }
