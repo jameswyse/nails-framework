@@ -29,6 +29,9 @@
     "joi": "~2.7.0",
     "request": "~2.34.0",
     "is": "~0.2.7",
-    "string": "~1.8.0"
+    "string": "~1.8.0",
+    "scooter": "~1.0.0",
+    "hapi-named-routes": "~0.1.0",
+    "hapi-swagger": "~0.1.5"
   }
 }
