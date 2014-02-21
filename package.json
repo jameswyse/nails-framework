@@ -2,7 +2,7 @@
   "name": "nails-framework",
   "version": "1.0.0",
   "description": "Nails Framework",
-  "main": "lib/index.js",
+  "main": "lndex.js",
   "scripts": {},
   "keywords": [
     "framework",
