@@ -33,6 +33,6 @@
     "hapi-named-routes": "~0.1.0",
     "hapi-swagger": "~0.1.5",
     "agenda": "~0.5.6",
-    "hapi-navigation": "~0.2.0"
+    "hapi-navigation": "~0.4.0"
   }
 }
