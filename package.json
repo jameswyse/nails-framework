@@ -15,8 +15,7 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "hapi": "^2.6.0",
-    "hapi-navigation": "^0.4.1",
-    "hapi-promise": "^0.0.4",
+    "hapi-navigation": "^0.4.2",
     "nails-utils": "^0.0.2",
     "confidence": "^0.12.0",
     "intel": "^0.5.1",
