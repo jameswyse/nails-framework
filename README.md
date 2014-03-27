@@ -6,7 +6,7 @@ Nails Framework
 **WARNING: Very much a work in progress!**
 
 ## Current Features
-- Web Server, powered by [Hapi](https://github.com/spumko/hapi)
+- Web server, powered by [Hapi](https://github.com/spumko/hapi)
 - Configuration, powered by [Confidence](https://github.com/spumko/confidence)
 - Logging, powered by [Intel](https://github.com/seanmonstar/intel)
 - Models, powered by [Model](https://github.com/geddy/model)
@@ -16,17 +16,17 @@ Nails Framework
 ## Planned Changes
 The following changes are planned:
 - Documentation
-- Test Coverage
+- Test coverage
 - Easier template engines usage
-- Easier Authentication & Sessions
-- Stream & Pipeline helpers
+- Easier authentication & sessions
+- Stream & pipeline helpers
 
 ## Plugins Planned
 The following features will be implemented as external modules:
-- Asset Management (cache busting, CDNs, etc)
-- Realtime Sockets
+- Asset management (cache busting, CDNs, etc)
+- Realtime sockets
 - Static site generator
-- SPA Pre-rendering
+- SPA pre-rendering
 - Documentation generator for your API/routes
 - Admin interface builder
 - Instant REST API for models
