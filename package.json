@@ -21,7 +21,7 @@
     "intel": "^0.5.1",
     "intel-syslog": "^0.1.0",
     "redis": "^0.10.0",
-    "agenda": "^0.6.1",
+    "agenda": "^0.6.2",
     "yar": "^2.0.0",
     "catbox-redis": "^1.0.1",
     "catbox": "^2.2.0",
