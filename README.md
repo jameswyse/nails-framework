@@ -3,7 +3,54 @@
 Nails Framework
 ===============
 
-:O
+**WARNING: Very much a work in progress!**
+
+## Current Features
+- Web Server, powered by [Hapi](https://github.com/spumko/hapi)
+- Configuration, powered by [Confidence](https://github.com/spumko/confidence)
+- Logging, powered by [Intel](https://github.com/seanmonstar/intel)
+- Models, powered by [Model](https://github.com/geddy/model)
+- Tasks, powered by [Agenda](https://github.com/rschmukler/agenda)
+- Services, a service locator to be used with external services/APIs
+
+## Planned Changes
+The following changes are planned:
+- Documentation
+- Test Coverage
+- Easier template engines usage
+- Easier Authentication & Sessions
+- Stream & Pipeline helpers
+
+## Plugins Planned
+The following features will be implemented as external modules:
+- Asset Management (cache busting, CDNs, etc)
+- Realtime Sockets
+- Static site generator
+- SPA Pre-rendering
+- Documentation generator for your API/routes
+- Admin interface builder
+- Instant REST API for models
+- Image resizing & manipulation
+- Scaffolding / Generator
+- i18n & L10n
+
+## Services Planned
+The following services will be implemented as external modules:
+- Generic API
+- Instagram
+- Twitter
+- Datasift
+- Facebook
+- Prismic.io
+- Amazon S3
+- GitHub
+- NPM
+- Mailchimp
+- Wordpress
+- Notifications (service agnostic)
+- Analytics (service agnostic)
+- E-Mail (service agnostic)
+- Weather (service agnostic)
 
 ## Licence
 
