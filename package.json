@@ -25,6 +25,7 @@
     "yar": "^2.0.0",
     "catbox-redis": "^1.0.1",
     "catbox": "^2.2.0",
-    "catbox-memory": "^1.0.1"
+    "catbox-memory": "^1.0.1",
+    "model": "^0.5.10"
   }
 }
