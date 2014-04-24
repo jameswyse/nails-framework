@@ -1,8 +1,8 @@
 {
   "name": "nails-framework",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Nails Framework",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {},
   "keywords": [
     "framework",
@@ -14,19 +14,15 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "hapi": "^3.0.2",
-    "hapi-navigation": "^0.4.3",
-    "nails-utils": "^0.0.2",
-    "confidence": "^0.12.0",
-    "intel": "^0.5.1",
-    "intel-syslog": "^0.1.0",
-    "redis": "^0.10.0",
-    "agenda": "^0.6.2",
-    "yar": "^2.0.0",
-    "catbox-redis": "^1.0.1",
-    "catbox": "^2.2.0",
-    "catbox-memory": "^1.0.1",
-    "model": "^0.5.10",
-    "nails-registry": "0.0.1"
+    "nails-utils": "0.1.x",
+    "rego": "0.0.x",
+    "hapi": "4.0.x",
+    "good": "2.0.x",
+    "confidence": "0.12.x",
+    "hapi-navigation": "0.4.x",
+    "catbox": "2.2.x",
+    "catbox-memory": "1.0.x",
+    "request": "2.34.x",
+    "minimist": "0.0.8"
   }
 }
