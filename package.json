@@ -1,6 +1,6 @@
 {
   "name": "nails-framework",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Nails Framework",
   "main": "lib/index.js",
   "scripts": {},
@@ -16,13 +16,13 @@
   "dependencies": {
     "nails-utils": "0.1.x",
     "rego": "0.0.x",
-    "hapi": "4.0.x",
+    "hapi": "5.1.x",
     "good": "2.0.x",
     "confidence": "0.12.x",
     "hapi-navigation": "0.4.x",
     "catbox": "2.2.x",
     "catbox-memory": "1.0.x",
-    "request": "2.34.x",
-    "minimist": "0.0.8"
+    "request": "2.36.x",
+    "minimist": "0.1.x"
   }
 }
